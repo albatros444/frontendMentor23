@@ -1,0 +1,225 @@
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  font-family: "DM Sans", sans-serif;
+}
+body h1,
+body h2,
+body h3,
+body h4,
+body h5,
+body h6,
+body p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+textarea,
+input {
+  outline: none;
+  font-family: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.attribution {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 5px;
+  margin: auto;
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+.background {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: hsl(27, 66%, 92%);
+}
+
+.card {
+  width: 540px;
+  height: 660px;
+  margin: 10px;
+}
+.card__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 125px;
+  margin-bottom: 24px;
+  padding: 25px 38px 25px 33px;
+  border-radius: 20px;
+  color: hsl(30, 75%, 97%);
+  background-color: hsl(10, 79%, 65%);
+}
+.card__top .balance {
+  margin-top: 8px;
+  font-size: 32px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+.card__top .imgDiv {
+  padding-top: 6px;
+}
+.card__main {
+  padding: 31px 40px 40px;
+  background-color: hsl(33, 100%, 98%);
+  border-radius: 20px;
+}
+.card__main h2 {
+  margin-bottom: 67px;
+  font-size: 32px;
+  letter-spacing: 0.015em;
+  color: hsl(25, 47%, 15%);
+}
+.card__main .barsSegment {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  margin-bottom: 30px;
+}
+.card__main .barsSegment .bar {
+  position: relative;
+}
+.card__main .barsSegment .bar .barSpending {
+  opacity: 0;
+  position: absolute;
+  left: -10px;
+  top: -48px;
+  width: 71px;
+  height: 40px;
+  padding-top: 8px;
+  border-radius: 5px;
+  text-align: center;
+  background-color: hsl(25, 47%, 15%);
+  color: white;
+  transition: all 0.11s ease-in-out;
+}
+.card__main .barsSegment .bar .barDiv {
+  width: 50px;
+  border-radius: 6px;
+  margin-bottom: 7px;
+  cursor: pointer;
+  background-color: hsl(10, 79%, 65%);
+  transition: all 0.11s ease-in-out;
+}
+.card__main .barsSegment .bar p {
+  font-size: 15px;
+  text-align: center;
+  color: hsl(28, 10%, 53%);
+}
+.card__main .barsSegment .selected .barSpending {
+  opacity: 1;
+}
+.card__main .barsSegment .selected .barDiv {
+  background-color: hsl(10, 70%, 75%);
+}
+.card__main hr {
+  margin-top: 32px;
+  margin-bottom: 32px;
+  border: 0;
+  height: 2px;
+  background: hsl(27, 66%, 92%);
+}
+.card__main .totalsSegment {
+  display: flex;
+  justify-content: space-between;
+  align-items: last baseline;
+  color: hsl(28, 10%, 53%);
+}
+.card__main .totalsSegment .total {
+  font-size: 49px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  color: hsl(25, 47%, 15%);
+}
+.card__main .totalsSegment .percentage {
+  font-weight: 700;
+  text-align: end;
+  color: hsl(25, 47%, 15%);
+}
+
+@media screen and (max-width: 500px) {
+  .background {
+    align-items: start;
+  }
+  .card {
+    width: 343px;
+    height: 535px;
+    margin-top: 65px;
+  }
+  .card p {
+    font-size: 15px;
+  }
+  .card__top {
+    height: 96px;
+    margin-bottom: 16px;
+    padding: 25px 25px 25px 20px;
+    border-radius: 10px;
+  }
+  .card__top .balance {
+    font-size: 24px;
+    margin-top: 3px;
+  }
+  .card__top .imgDiv img {
+    width: 60px;
+  }
+  .card__main {
+    padding: 25px 20px;
+    border-radius: 10px;
+  }
+  .card__main h2 {
+    margin-bottom: 51px;
+    font-size: 24px;
+    letter-spacing: -0.01em;
+  }
+  .card__main .barsSegment .bar .barSpending {
+    left: -10px;
+    top: -36px;
+    width: 52px;
+    height: 25px;
+    padding-top: 2px;
+    border-radius: 3px;
+    font-size: 16px;
+  }
+  .card__main .barsSegment .bar .barDiv {
+    width: 33px;
+    border-radius: 3px;
+    margin-bottom: 11px;
+  }
+  .card__main .barsSegment .bar p {
+    font-size: 12px;
+  }
+  .card__main hr {
+    margin-top: -6px;
+    margin-bottom: 25px;
+  }
+  .card__main .totalsSegment .total {
+    margin-top: 4px;
+    font-size: 30px;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
